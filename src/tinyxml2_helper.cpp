@@ -1,4 +1,4 @@
-#include "tinyxml2_helper.hpp"
+#include "tinyxml2_util/tinyxml2_helper.hpp"
 
 bool get_bool_text(const tinyxml2::XMLElement* root, const char* child, bool* const out_val)
 {
