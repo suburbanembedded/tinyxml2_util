@@ -40,6 +40,26 @@ bool get_int_text(const tinyxml2::XMLElement* root, const char* child, int* cons
 	return true;
 }
 
+bool get_uint_text(const tinyxml2::XMLElement* root, const char* child, unsigned* const out_val)
+{
+	if(root == nullptr)
+	{
+		return false;
+	}
+
+	const tinyxml2::XMLElement* node = root->FirstChildElement(child);
+	if(node == nullptr)
+	{
+		return false;
+	}
+	if(node->QueryUnsignedText(out_val) != tinyxml2::XML_SUCCESS)
+	{
+		return false;
+	}
+
+	return true;
+}
+
 bool get_hex_text(const tinyxml2::XMLElement* root, const char* child, unsigned* const out_val)
 {
 	if(root == nullptr)
