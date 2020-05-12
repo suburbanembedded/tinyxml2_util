@@ -1,3 +1,10 @@
+/**
+ * @brief tinyxml2_helper
+ * @author Jacob Schloss <jacob@schloss.io>
+ * @copyright Copyright (c) 2019 Jacob Schloss. All rights reserved.
+ * @license Licensed under the 3-Clause BSD license. See LICENSE for details
+*/
+
 #include "tinyxml2_util/tinyxml2_helper.hpp"
 
 bool get_bool_text(const tinyxml2::XMLElement* root, const char* child, bool* const out_val)

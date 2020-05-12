@@ -5,7 +5,12 @@ add_library(tinyxml2_util
 target_include_directories(tinyxml2_util PUBLIC
 	include/
 )
-
-target_link_libraries(tinyxml2_util
-	tinyxml2_static
-)
+if(${BUILD_SHARED_LIBS})
+	target_link_libraries(tinyxml2_util
+		tinyxml2
+	)
+else(${BUILD_SHARED_LIBS})
+        target_link_libraries(tinyxml2_util
+                tinyxml2_static
+        )
+endif(${BUILD_SHARED_LIBS})
