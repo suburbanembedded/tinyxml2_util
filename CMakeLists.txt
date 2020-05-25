@@ -14,3 +14,10 @@ else(${BUILD_SHARED_LIBS})
                 tinyxml2_static
         )
 endif(${BUILD_SHARED_LIBS})
+
+if(DEFINED Doxygen::doxygen)
+	doxygen_add_docs(tinyxml2_util_docs
+		include/
+		src/
+	)
+endif()
